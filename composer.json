@@ -1,0 +1,19 @@
+{
+    "name": "xxxxpro/preambula",
+    "description": "Fast and lightweight FrontMatter and Markdown files handler to display them as HTML pages.",
+    "type": "project",
+    "require": {
+        "webuni/front-matter": "^2.0",
+        "cebe/markdown": "^1.2",
+        "php": "*",
+        "yosymfony/toml": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "XXXX Pro",
+            "email": "me@4xpro.ru"
+        }
+    ],
+    "minimum-stability": "beta"
+}

@@ -1,0 +1,8 @@
+DirectoryIndex index.md
+
+RewriteEngine on
+RewriteCond %{HTTP_ACCEPT} !text\/markdown
+RewriteCond %{QUERY_STRING} !accept=text\/markdown
+#RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.md$ _handler.php
+

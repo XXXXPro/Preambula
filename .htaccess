@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(public_html/.*)$ $1 [QSA,L]
+RewriteRule ^(.*)$ public_html/$1 [QSA]
+</IfModule>
