@@ -8,7 +8,8 @@ rel:
 
 There are two ways to install Preambula. The first way is traditional: just download ZIP archive and extract it on your server. The archive already contains all necessary files. The other way is to clone GitHub repository and then run `composer` to install dependencies:
 
-    git clone https://github.com/XXXXPro/Preambula  
+    git clone https://github.com/XXXXPro/Preambula
+    cd Preambula
     composer install
 
 Then copy `config.sample.php` file to `config.php` and edit the latter according your needs.
