@@ -1,10 +1,6 @@
----
-title: "Preambula, the PHP FrontMatter and Markdown processor"
-descr: "Preambula allows to quickly turn collection of Markdown files to fully functional Web-site."
----
 # Preambula
 
-Preambula is very simple and lighweight Markdown processor to display Markdown files as Web-pages. You can write your Markdown notes in any editor, i.e. Obsidian, or even in `nano` via SSH connection, and the result will be displayed immediately on the Web-site without any building or compilation steps. Preambula is written in PHP, so it can be run on any shared hosting.
+Preambula is very simple and lightweight Markdown processor to display Markdown files as Web-pages. You can write your Markdown notes in any editor, i.e. Obsidian, or even in `nano` via SSH connection, and the result will be displayed immediately on the Web site without any building or compilation steps. Preambula is written in PHP, so it can be run on almost any shared hosting.
 
 ## Features:
 
@@ -19,7 +15,8 @@ Preambula is very simple and lighweight Markdown processor to display Markdown f
 
 There are two ways to install Preambula. The first way is traditional: just download ZIP archive from Releases section and extract it on your server. The archive already contains all necessary files. The other way is to clone GitHub repository and then run `composer` to install dependencies:
 
-    git clone https://github.com/XXXXPro/Preambula  
+    git clone https://github.com/XXXXPro/Preambula
+    cd Preambula
     composer install
 
 Then copy `config.sample.php` file to `config.php` and edit the latter according your needs.
@@ -48,37 +45,38 @@ Frontmatter is just Markdown file with some metadata at beginning separated with
 Preambula just converts Markdown files to HTML on the fly, so site structure will be the same as structure of your files in public_html directory. Just like good old static files, but with templating and much less to type than HTML!
 
 Example:
-
-   ---
-   title: "Hello world page"
-   template: "simple.html"
-   meta:
+```
+---
+title: "Hello world page"
+template: "simple.html"
+meta:
       description: "This is first page created with Preambula."
       generator: "Preambula, the PHP Markdown processor"
       "og:title": "Hello world page build with Preambula"
       "og:description": "If key contains colon (:), the metatag wil have property attribute instead of name attribute"
-   rel:
+rel:
       next: "page2.md"
-   somevar: "Use {{ somevar }} to output this in your HTML template"
-   othervar:
+somevar: "Use {{ somevar }} to output this in your HTML template"
+othervar:
       subvar: "Use {{ othervar.subvar }} to print this in template"
       second: "And {{ othervar.second }} for this"
-   ---
-   # Hello world!
+---
+# Hello world!
 
-   This is simple Markdown page! Refer to [Markdownguide.Org](ttps://www.markdownguide.org/basic-syntax/) to learn more Markdown syntax.   
-
+This is simple Markdown page!
+Refer to [Markdownguide.Org](ttps://www.markdownguide.org/basic-syntax/) to learn more Markdown syntax.   
+```
 The most important variables are:
 
 * `title` — will be displayed as page title tag.
 * `meta` — all subkeys of this variable will become the meta tags in the resulting page. If subkey has colon (:) in its name, the meta tag will have "property" attribute, otherwise it get "name" attribute. This is convinient to specify both common metatags and OpenGraph attributes.
-* `template` — the name of [template file](templates.md) to use. By default, the template path should be relative to `templates` subdirectory of Preambula root dir, but templates location can be changed in [configuration file](config.md).
+* `template` — the name of template file to use. By default, the template path should be relative to `templates` subdirectory of Preambula root dir, but templates location can be changed in configuration file.
 * `descr` — it is just shortcut for meta.description.
 * `rel` — all subkeys of this tag will be converted to link tags with specified rel attribute.   
 
 ## Templates 
 
-By default, templates are located in the `templates` subdirectory, but this can be overridden in [configuration file](config.md). They are simple HTML files with some directives inside:
+By default, templates are located in the `templates` subdirectory, but this can be overridden in configuration file. They are simple HTML files with some directives inside:
 
 * `{% include filename.html %}` — puts the contents of filename.html (note: there is no quotes around filename). Filename can contain path that should be relative to templates directory.
 * `{% include_relative filename.html %}` — the same as former, but file path is relative to directory where current template is located.
