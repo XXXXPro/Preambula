@@ -70,13 +70,13 @@ The most important variables are:
 
 * `title` — will be displayed as page title tag.
 * `meta` — all subkeys of this variable will become the meta tags in the resulting page. If subkey has colon (:) in its name, the meta tag will have "property" attribute, otherwise it get "name" attribute. This is convinient to specify both common metatags and OpenGraph attributes.
-* `template` — the name of [template file](templates.md) to use. By default, the template path should be relative to `templates` subdirectory of Preambula root dir, but templates location can be changed in [configuration file](config.md).
+* `template` — the name of template file to use. By default, the template path should be relative to `templates` subdirectory of Preambula root dir, but templates location can be changed in configuration file.
 * `descr` — it is just shortcut for meta.description.
 * `rel` — all subkeys of this tag will be converted to link tags with specified rel attribute.   
 
 ## Templates 
 
-By default, templates are located in the `templates` subdirectory, but this can be overridden in [configuration file](config.md). They are simple HTML files with some directives inside:
+By default, templates are located in the `templates` subdirectory, but this can be overridden in configuration file. They are simple HTML files with some directives inside:
 
 * `{% include filename.html %}` — puts the contents of filename.html (note: there is no quotes around filename). Filename can contain path that should be relative to templates directory.
 * `{% include_relative filename.html %}` — the same as former, but file path is relative to directory where current template is located.
