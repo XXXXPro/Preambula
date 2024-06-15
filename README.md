@@ -28,16 +28,17 @@ If `AllowOverride` directive is enabled, no futher configuration required. Just 
 ### Nginx 
 
 You need to specify Nginx to process .md-files with _handler.php. To do so, add to your site configuration file something like this:
-
-    index index.md;
-    location ~ [^/]\.md(/|$) {
-        root /path/to/preambula/public_html; # replace with path to your Preambula public_html subdirectory
-        fastcgi_param SCRIPT_FILENAME $document_root/_handler.php; 
-        try_files $uri =404;
-        fastcgi_pass    unix:/path/to/your/php-fpm-socket.sock  # replace with path to your php-fpm socker
-        fastcgi_index   index.md;
-        include         /etc/nginx/fastcgi_params;
-    }
+```
+index index.md;
+location ~ [^/]\.md(/|$) {
+    root /path/to/preambula/public_html; # replace with path to your Preambula public_html subdirectory
+    fastcgi_param SCRIPT_FILENAME $document_root/_handler.php; 
+    try_files $uri =404;
+    fastcgi_pass    unix:/path/to/your/php-fpm-socket.sock; # replace with path to your php-fpm socket
+    fastcgi_index   index.md;
+    include         /etc/nginx/fastcgi_params;
+}
+```
 
 ## Markdown and FrontMatter
 
