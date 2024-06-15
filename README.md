@@ -1,7 +1,3 @@
----
-title: "Preambula, the PHP FrontMatter and Markdown processor"
-descr: "Preambula allows to quickly turn collection of Markdown files to fully functional Web-site."
----
 # Preambula
 
 Preambula is very simple and lighweight Markdown processor to display Markdown files as Web-pages. You can write your Markdown notes in any editor, i.e. Obsidian, or even in `nano` via SSH connection, and the result will be displayed immediately on the Web-site without any building or compilation steps. Preambula is written in PHP, so it can be run on any shared hosting.
@@ -48,26 +44,27 @@ Frontmatter is just Markdown file with some metadata at beginning separated with
 Preambula just converts Markdown files to HTML on the fly, so site structure will be the same as structure of your files in public_html directory. Just like good old static files, but with templating and much less to type than HTML!
 
 Example:
-
-   ---
-   title: "Hello world page"
-   template: "simple.html"
-   meta:
+```
+---
+title: "Hello world page"
+template: "simple.html"
+meta:
       description: "This is first page created with Preambula."
       generator: "Preambula, the PHP Markdown processor"
       "og:title": "Hello world page build with Preambula"
       "og:description": "If key contains colon (:), the metatag wil have property attribute instead of name attribute"
-   rel:
+rel:
       next: "page2.md"
-   somevar: "Use {{ somevar }} to output this in your HTML template"
-   othervar:
+somevar: "Use {{ somevar }} to output this in your HTML template"
+othervar:
       subvar: "Use {{ othervar.subvar }} to print this in template"
       second: "And {{ othervar.second }} for this"
-   ---
-   # Hello world!
+---
+# Hello world!
 
-   This is simple Markdown page! Refer to [Markdownguide.Org](ttps://www.markdownguide.org/basic-syntax/) to learn more Markdown syntax.   
-
+This is simple Markdown page!
+Refer to [Markdownguide.Org](ttps://www.markdownguide.org/basic-syntax/) to learn more Markdown syntax.   
+```
 The most important variables are:
 
 * `title` — will be displayed as page title tag.
