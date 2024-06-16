@@ -6,7 +6,7 @@ rel:
 ---
 # Installation
 
-There are two ways to install Preambula. The first way is traditional: just [download ZIP archive](/donwload/preambula.zip) and extract it on your server. The archive already contains all necessary files. The other way is to clone GitHub repository and then run `composer` to install dependencies:
+There are two ways to install Preambula. The first way is traditional: just [download ZIP archive](/download/preambula.zip) and extract it on your server. The archive already contains all necessary files. The other way is to clone GitHub repository and then run `composer` to install dependencies:
 
     git clone https://github.com/XXXXPro/Preambula
     cd Preambula
