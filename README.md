@@ -13,7 +13,7 @@ Preambula is very simple and lightweight Markdown processor to display Markdown 
 
 ## Installation
 
-There are two ways to install Preambula. The first way is traditional: just download ZIP archive from Releases section and extract it on your server. The archive already contains all necessary files. The other way is to clone GitHub repository and then run `composer` to install dependencies:
+There are two ways to install Preambula. The first way is traditional: just download ZIP archive from [Releases](https://github.com/XXXXPro/Preambula/releases/) section and extract it on your server. The archive already contains all necessary files. The other way is to clone GitHub repository and then run `composer` to install dependencies:
 
     git clone https://github.com/XXXXPro/Preambula
     cd Preambula
@@ -40,7 +40,7 @@ location ~ [^/]\.md(/|$) {
 }
 ```
 
-## Markdown and FrontMatter
+## Data format
 
 Frontmatter is just Markdown file with some metadata at beginning separated with ---. Metadata can be in YAML, TOML or JSON format.
 Preambula just converts Markdown files to HTML on the fly, so site structure will be the same as structure of your files in public_html directory. Just like good old static files, but with templating and much less to type than HTML!
@@ -89,4 +89,15 @@ By default, templates are located in the `templates` subdirectory, but this can 
 * `{{ somevar }}` — outputs value of somevar variable from Frontmatter data. For complex data types, use `{{ othervar.subvar }}` syntax, not `othervar['subvar']`.
 
 The Preambula intended to be as simple and lightweight as possible, so none of loops or ifs are supported.
+
+## Multisite mode
+
+Single copy of Preambula can be used to serve multiple sites at same time. To use Preambula in multisite mode do following:
+
+* create subdirectories matching domain names in Preambula root directory (i.e. /path/to/preambula/domain1.example.com, /path/to/preambula/domain2.example.com and so on)
+* copy files `.htaccess` and `_handler.php` from `public_html` to each created directory
+* specify created directories as `DocumentRoot` (in VirtualHost sections of Apache config file) or just `root` (in "server" blocks of nginx config)
+* put your Markdown files in appropriate directories for each site.
+
+If you need specific config for one or more of this sites, copy `config.php` file to domain.name.config.php (i.e. domain1.example.com.config.php) and change the name of config file in `_handler.php` (string `require __DIR__.'/../config.php';`) in appropriate directory.
 
