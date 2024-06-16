@@ -27,6 +27,7 @@ class Preambula {
       'charset'=>'utf-8',
       'data_dir'=>'.',
       'base_url'=>'/',
+      'description_legth'=>240,
       'index_file'=>'index.md',
       'template_dir'=>__DIR__.'/template',
       'defaults'=>array(
@@ -149,7 +150,7 @@ class Preambula {
     for ($i=1; $i<=6; $i++) {
       if (preg_match('|<h'.$i.'[^>]*?>(.*?)</h'.$i.'>|us',$text,$match)) $text = str_replace($match[0],'',$text);
     }
-    return str_replace("\n"," ",$this->cutText(strip_tags($text),240));
+    return str_replace("\n"," ",$this->cutText(strip_tags($text),$this->config['description_length']));
   }
 
   protected function cutText(string $text, int $maxlength):string {
