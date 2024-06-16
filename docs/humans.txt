@@ -1,0 +1,15 @@
+/* TEAM */
+   Author:   4X_Pro
+   Contact:  me@4xpro.ru
+   Twitter:  https://twitter.com/4X_Pro
+   Location: Russia, Moscow, Perovo
+   
+/* THANKS */
+   Mick Kuzmin for logo
+
+/* SITE */
+   Created: June 2024
+   Language:  English
+   Doctype: HTML5
+   IDE: VSCode
+   No Macs or iPhones were used to create this site! Linux forever!

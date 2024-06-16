@@ -35,10 +35,11 @@ Sample FrontMatter file:
 
 The most important variables are:
 
-* `title` — will be displayed as page title tag.
+* `title` — will be displayed as page title tag. If no title specified, it will be generated automatically from first heading tag. 
 * `meta` — all subkeys of this variable will become the meta tags in the resulting page. If subkey has colon (:) in its name, the meta tag will have "property" attribute, otherwise it get "name" attribute. This is convinient to specify both common metatags and OpenGraph attributes.
 * `template` — the name of [template file](templates.md) to use. By default, the template path should be relative to `templates` subdirectory of Preambula root dir, but templates location can be changed in [configuration file](config.md).
-* `descr` — it is just shortcut for meta.description.
+* `descr` — it is just shortcut for meta.description. If none of descr and meta.description specified, the beginning of first non-heading text will be used as description.
 * `rel` — all subkeys of this tag will be converted to link tags with specified rel attribute.
+* `lang` — language code for `lang` attribute of root `html` tag.
 
 <p style="display:block; text-align: center"><a href="/">Back to main page</a></p>

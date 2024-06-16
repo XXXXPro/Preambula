@@ -16,11 +16,11 @@ Then copy `config.sample.php` file to `config.php` and edit the latter according
 
 ## Apache
 
-If `AllowOverride` directive is enabled, no futher configuration required. Just specify `public_html` subdirectory of Preambula as DocumentRoot in the site config file (i.e. if you install Preambula in /var/www/preambula, then you should put `DocumentRoot "/var/www/preambula/public_html"` to your site configuration file), put there your Markdown files and enjoy. If you don't want to enable .htaccess file, copy all directives from public_html/.htaccess to httpd.conf or site configuration file. And don't forget to enable mod_rewrite!
+If `AllowOverride` directive is enabled, no futher configuration required. Just specify `public_html` subdirectory of Preambula as DocumentRoot in the `VirtualHost` section of site configuration file (i.e. if you install Preambula in /var/www/preambula, then you should put `DocumentRoot "/var/www/preambula/public_html"`), put there your Markdown files and enjoy. If you don't want to enable .htaccess file, copy all directives from public_html/.htaccess to appropriate `VirtualHost` section of Apache configuration file. And don't forget to enable `mod_rewrite`!
 
 ## Nginx 
 
-You need to specify Nginx to process .md-files with _handler.php. To do so, add to your site configuration file something like this:
+You need to specify Nginx to process .md-files with _handler.php. To do so, add to your site configuration file (the block where `server_name` directive is located) something like this:
 
     index index.md;
     location ~ [^/]\.md(/|$) {
