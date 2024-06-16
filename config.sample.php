@@ -12,12 +12,14 @@
  // Copy this file to config.php and change according your needs
 
 $preambula_settings = array(
-  // Directory where Markdown files are stored. Can be absolute path or relative to directory where _handler.php is placed (i.e. public_html)
+  // Directory where Markdown files stored. Can be absolute path or relative to directory where _handler.php is placed (i.e. public_html)
   'data_dir'=>'.',
   // File to display if directory address is requested. Should match DirectoryIndex directive in web server configuration. Multiple index names are not supported for now
   'index_file'=>'index.md',
-  // The root path o
+  // The URL of Preambula data directory. This part will be removed from requesting URL when looking for requested file.
   'base_url'=>'/',
+  // Maximum length of automatically generated description
+  'description_legth'=>240,  
   // Debug mode enables display_errors to browser, disables cache and ouputs page generation time and memory consumption to {{ debug }} clause in template
   'debug'=>false,
   // Disables cache and HTTP status 304 output
