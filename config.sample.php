@@ -30,6 +30,8 @@ $preambula_settings = array(
   'defaults'=>array(
     // lang is used in "lang" attribute <html> tag
     'lang'=>'en',
+    // default site encoding (character set)
+    'charset'=>'utf-8',    
     // default template to wrap Markdown code
     'template'=>'default.html'
   ),
