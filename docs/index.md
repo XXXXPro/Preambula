@@ -4,10 +4,10 @@ descr: "Preambula allows to quickly turn collection of Markdown files to fully f
 meta:
    generator: "Preambula, the PHP Markdown processor"
 ---
-# ![Preambula logo](logo.png)
+# ![Preambula logo](biglogo.svg)
 
 
-Preambula is very simple and lightweight Markdown processor to display Markdown files as Web pages. You can write your Markdown notes in any editor, i.e. Obsidian, or even in `nano` via SSH connection, and the result will be displayed immediately on the Web site without any building or compilation steps. Preambula is written in PHP, so it can be run on any shared hosting.
+Preambula is very simple and lightweight FrontMatter processor to display Markdown files as Web pages. You can write your Markdown notes in any editor, i.e. Obsidian, or even in `nano` via SSH connection, and the result will be displayed immediately on the Web site without any building or compilation steps. Preambula is written in PHP, so it can be run on almost any shared hosting.
 
 [Download latest version](/download/preambula.zip) —  0.90b (16 June 2024)
 
