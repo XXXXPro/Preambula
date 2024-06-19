@@ -1,6 +1,6 @@
 ---
 title: "Markdown and FrontMatter data formats"
-descr: ""
+descr: "FrontMatter is format where YAML or TOML data added to very beginning of MarkDown file"
 rel:
   next: "templates.md"
   prev: "config.md"
