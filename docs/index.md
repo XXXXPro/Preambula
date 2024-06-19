@@ -3,6 +3,7 @@ title: "Preambula, the PHP FrontMatter and Markdown processor"
 descr: "Preambula allows to quickly turn collection of Markdown files to fully functional Web-site."
 meta:
    generator: "Preambula, the PHP Markdown processor"
+   og:image: "biglogo.svg"
 ---
 # ![Preambula logo](biglogo.svg)
 
@@ -31,4 +32,4 @@ Preambula is very simple and lightweight FrontMatter processor to display Markdo
 ## Authors
 
 Idea and programming: 4X_Pro <me@4xpro.ru>, site: [4xpro.ru](https://4xpro.ru), GitHub: [XXXXPro](https://github.com/XXXXPro), Telegram: [@XXXXPro](https://t.me/XXXXPro).  
-Naming and logo: Mick Kuzmin, Twitter: [@hypnomouse](https://twitter.com/hypnomouse)
+Naming and logo: Mick Kuzmin, Twitter: [@Mick_Kuzmin](https://t.me/Mick_Kuzmin)
