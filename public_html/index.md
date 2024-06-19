@@ -13,7 +13,7 @@ othervar:
    subvar: "Use {{ othervar.subvar }} to print this in template"
    second: "And {{ othervar.second }} for this"
 ---
-![Preambula logo](https://preambula.4xpro.ru/logo.png)
+![Preambula logo](https://preambula.4xpro.ru/biglogo.svg)
 # Hello world!
 
 If you see this, everything works well!
