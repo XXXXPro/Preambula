@@ -32,4 +32,4 @@ Preambula is very simple and lightweight FrontMatter processor to display Markdo
 ## Authors
 
 Idea and programming: 4X_Pro <me@4xpro.ru>, site: [4xpro.ru](https://4xpro.ru), GitHub: [XXXXPro](https://github.com/XXXXPro), Telegram: [@XXXXPro](https://t.me/XXXXPro).  
-Naming and logo: Mick Kuzmin, Twitter: [@Mick_Kuzmin](https://t.me/Mick_Kuzmin)
+Naming and logo: Mick Kuzmin, Telegram: [@Mick_Kuzmin](https://t.me/Mick_Kuzmin)

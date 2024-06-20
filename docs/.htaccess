@@ -1,8 +1,14 @@
 DirectoryIndex index.md
 
+Header set Vary "Accept-Encoding"
+
 RewriteEngine on
+
+RewriteCond %{HTTP_HOST} !^preambula\.4xpro\.ru$ [NC]
+RewriteRule ^(.*)$ https://preambula.4xpro.ru [R=301,L]
+
 RewriteCond %{HTTP_ACCEPT} !text\/markdown
 RewriteCond %{QUERY_STRING} !accept=text\/markdown
-#RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule \.md$ _handler.php
 
